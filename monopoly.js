@@ -18,7 +18,7 @@
  * setting NODE_ENV to production will cause ExpressJS to serve up uninformative 
  * server error responses for all errors.
   *
- * @author: kvlinden
+ * @author: kvlinden, Lexi Sharp
  * @date: Summer, 2020
  */
 
