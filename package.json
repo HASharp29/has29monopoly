@@ -1,0 +1,18 @@
+{
+    "name": "has29monopoly",
+    "version": "1.0.0",
+    "description": "CS 262 monopoly project",
+    "main": "monopolyService.js",
+    "author": "has29",
+    "license": "ISC",
+    "engines": {
+      "node": "19.x"
+    },
+    "scripts": {
+      "start": "node monopoly.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "pg-promise": "^10.12.1"
+    }
+  }
