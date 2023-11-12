@@ -45,7 +45,7 @@ router.get("/", readHelloMessage);
 router.get("/players", readPlayers);
 router.get("/players/:id", readPlayer);
 router.get("/games", readGames);
-router.get("/games/:game", gameScores);
+router.get("/games/:id", gameScores);
 router.put("/players/:id", updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
