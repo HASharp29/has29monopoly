@@ -66,7 +66,7 @@ function readHelloMessage(req, res) {
     res.send('Hello, is Lexi\'s monopoly service!');
 }
 
- function readPlayers(req, res, next) {
+function readPlayers(req, res, next) {
     db.many("SELECT * FROM Player")
         .then(data => {
             res.send(data);
@@ -85,14 +85,16 @@ function readPlayer(req, res, next) {
             next(err);
         });
 }
+
+//join query
 function gameScores(req, res, next) {
     db.many("SELECT Player.name, PlayerGame.score FROM Player, PlayerGame, Game WHERE Player.ID= PlayerGame.playerID and PlayerGame.gameID = Game.ID AND Game.ID = ${game}", req.params)
-    .then(data => {
-        returnDataOr404(res, data);
-    })
-    .catch(err => {
-        next(err);
-    });
+        .then(data => {
+            returnDataOr404(res, data);
+        })
+        .catch(err => {
+            next(err);
+        });
 }
 
 function updatePlayer(req, res, next) {
