@@ -98,7 +98,7 @@ function readGames(req, res, next) {
 }
 //join query
 function gameScores(req, res, next) {
-    db.many("SELECT Player.name, PlayerGame.score FROM Player, PlayerGame, Game WHERE Player.ID= PlayerGame.playerID and PlayerGame.gameID = Game.ID AND Game.ID = ${game}", req.params)
+    db.many("SELECT Player.name, PlayerGame.score, .ID FROM Player, PlayerGame, Game WHERE Player.ID= PlayerGame.playerID and PlayerGame.gameID = Game.ID AND Game.ID = ${game}", req.params)
         .then(data => {
             returnDataOr404(res, data);
         })
